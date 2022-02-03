@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\BookController;
+use App\Http\Controllers\API\LocationController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,7 +15,7 @@ use App\Http\Controllers\API\BookController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::apiResource('location', LocationController::class);        
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
